@@ -1,0 +1,21 @@
+http://localhost:8080/Skejool/webresources/myresource
+curl -v http://localhost:8080/Skejool/webresources/myresource
+
+http://localhost:8080/skejool/students/9020955
+http://localhost:8080/skejool/myresource/DavidSells
+
+1.mvn clean install
+2.mvn jetty:run-war
+
+
+SELECT barcode FROM Student barcode where barcode.studentId=9060555
+select u.studentId as username, u.password as password, 'true' as enabled from student as u where u.studentId=1160955
+
+    
+select    u.semester as semester, u.courseYear as year, u.courseId as course	from    coursesequence as u	where    u.sequenceId = "CompEngrSept"
+select    u.semester,    u.courseYear,    u.courseId	from    coursesequence as u	where    u.sequenceId = "CompEngrSept"
+select u.semester, u.courseYear, u.courseId from sequenceElement as u where u.sequenceId = 'CompEngrSept'
+
+select u.studentId as username, u.authority as authority from authorities as u where u.studentId='9060555'
+
+Query queryLoadSequence = entityManager.createNativeQuery("select courseCode, semester, courseYear from sequenceMember where sequenceId='" + sequenceId + "'");

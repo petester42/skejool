@@ -1,0 +1,60 @@
+package com.soen341.rest.resources;
+
+import java.util.Date;
+
+import javax.ws.rs.core.MediaType;
+
+import static org.mockito.Mockito.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.request.RequestContextListener;
+
+import com.soen341.dao.StudentDao;
+import com.soen341.model.Student;
+import com.soen341.service.StudentService;
+import com.soen341.service.impl.StudentServiceImpl;
+import com.sun.jersey.api.client.UniformInterfaceException;
+import com.sun.jersey.spi.spring.container.servlet.SpringServlet;
+import com.sun.jersey.test.framework.JerseyTest;
+import com.sun.jersey.test.framework.WebAppDescriptor;
+import com.sun.jersey.test.framework.spi.container.TestContainerFactory;
+import com.sun.jersey.test.framework.spi.container.grizzly2.web.GrizzlyWebTestContainerFactory;
+
+//--------------------------------------------------------------------------------------------------------------------------------
+public class StudentResourceTest extends JerseyTest
+{
+	@Autowired
+	private StudentService studentService;
+
+	//--------------------------------------------------------------------------------------------------------------------------------
+	public StudentResourceTest() throws Exception
+	{
+		super(new WebAppDescriptor.Builder("com.soen341.rest.resources")
+		.contextPath("skejool")
+		.contextParam("contextConfigLocation", "classpath:applicationContext.xml")
+		.servletClass(SpringServlet.class)
+		.contextListenerClass(ContextLoaderListener.class)
+		.requestListenerClass(RequestContextListener.class)
+		.build());
+	}
+
+	//--------------------------------------------------------------------------------------------------------------------------------
+	@Test public void testGetProfile()
+	{
+		Student mockStudent = new Student();
+		mockStudent.setProfileId(Long.valueOf(1));
+		mockStudent.setStudentId("1111111");
+		mockStudent.setBarcode("111111111111");
+
+		when(studentService.loadProfile("1111111")).thenReturn(mockStudent);
+
+		Student student = resource().path("/students/9060955").accept(MediaType.APPLICATION_JSON).get(Student.class);
+
+		Assert.assertNotNull(student);
+		Assert.assertEquals("9060955", student.getStudentId());
+		Assert.assertEquals("111111111111", student.getProfileId());
+	}
+}

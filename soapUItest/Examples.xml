@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Examples" resourceRoot="${projectDir}" soapui-version="4.0.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="Loaders" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        
+        <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+            
+        <con:endpoint>http://localhost:8080/skejool/students/9060955</con:endpoint></con:endpoints>
+        <con:resource name="User" path="http://localhost:9998/student">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Get" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                    <con:mediaType>text/html</con:mediaType>
+                    <con:status>404 405</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>users</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>Response</con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>404</con:status>
+                    <con:params/>
+                    <con:element xmlns:tes="http://localhost/TI/resources/Acme/user/testUser">tes:Fault</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Get all users" mediaType="application/xml" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>epolinski@acme.com</con:username>
+                        <con:password>On3On3</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+                <con:request name="Select testUser by userName" mediaType="application/xml" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-username</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>${test.http.user.acme}</con:username>
+                        <con:password>${test.http.password.acme}</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+                <con:request name="Get testUser" mediaType="application/xml" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:9998/student</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>${test.http.user.acme}</con:username>
+                        <con:password>${test.http.password.acme}</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="Setter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/conflictingUser-code</con:endpoint>
+        </con:endpoints>
+        <con:resource name="User" path="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Put" method="PUT">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                    <con:mediaType>text/html</con:mediaType>
+                    <con:status>405 401 400 403 500</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="REQUEST">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>user</con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>500</con:status>
+                    <con:params/>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>404 400 500</con:status>
+                    <con:params/>
+                    <con:element>violations</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>304</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:request name="Create/Update testUser" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>${test.http.user.acme}</con:username>
+                        <con:password>${test.http.password.acme}</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="Deleter" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+        </con:endpoints>
+        <con:resource name="User" path="/${webcontext.name}/resources/${test.http.tenant.acme}/user">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Delete" method="DELETE">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>404</con:status>
+                    <con:params/>
+                    <con:element xmlns:tes="http://localhost/TI/resources/Acme/user/testUser-code">tes:Fault</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType xsi:nil="true"/>
+                    <con:status>204</con:status>
+                    <con:params/>
+                    <con:element>data</con:element>
+                </con:representation>
+                <con:request name="Delete testUser" mediaType="application/xml" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>${test.http.user.acme}</con:username>
+                        <con:password>${test.http.password.acme}</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:testSuite name="Profile">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="CRUD - Top entity" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="jettyExample">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="jettyExample" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/Skejool/webresources/myresource</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Load profile by ID (9060955) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load profile by ID (9060955) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9060955</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            
+            
+            
+            
+            <con:testStep type="restrequest" name="v2 Load profile by ID">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="v2 Load profile by ID" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/906095</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:testSuite name="Normal user lifecycle">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="CRUD - Top entity" searchProperties="true" id="99d13da4-b03e-48fd-89a1-918b82c7eb17">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Verify testUser is missing">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser is missing" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:9998/fuckyou/hi</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Create testUser">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Create testUser" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <firstName>testUser-first-name</firstName>
+    <lastName>testUser-last-name</lastName>
+    <userName>testUser-username</userName>
+    <email>testUser@test.case</email>
+    <canLogin>true</canLogin>
+    <isAdmin>false</isAdmin>
+    <isBroker>false</isBroker>
+    <isReadOnly>false</isReadOnly>
+    <password>_aaBB00_</password>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user just created (insertWhen = updateWhen)">
+                            <con:configuration>
+                                <path>/user/insertWhen/text()=/user/updateWhen/text()</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Update testUser">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Update testUser" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <firstName>TESTUSER-First-Name</firstName>
+    <lastName>TESTUSER-Last-Name</lastName>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user just updated (insertWhen &lt; updateWhen)">
+                            <con:configuration>
+                                <path>/user/insertWhen/text() &lt; /user/updateWhen/text()</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify first name case updated">
+                            <con:configuration>
+                                <path>/user/firstName/text()</path>
+                                <content>&lt;xml-fragment>TESTUSER-First-Name&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify last name case updated">
+                            <con:configuration>
+                                <path>/user/lastName/text()</path>
+                                <content>&lt;xml-fragment>TESTUSER-Last-Name&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify code NOT updated">
+                            <con:configuration>
+                                <path>/user/code/text()</path>
+                                <content>&lt;xml-fragment>testUser-code&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Delete testUser">
+                <con:settings/>
+                <con:config service="Deleter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Delete testUser" mediaType="application/xml" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify testUser has been deleted">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser has been deleted" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:testSuite name="Attempt to create conflictingUser with testUser's userName">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="CRUD - Top entity" searchProperties="true" id="7a7e4131-3460-4f2b-90ef-9281f6837034">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Verify testUser is missing">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser is missing" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Create testUser">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Create testUser" mediaType="text/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <firstName>testUser-first-name</firstName>
+    <lastName>testUser-last-name</lastName>
+    <userName>testUser-username</userName>
+    <email>testUser@test.case</email>
+    <canLogin>true</canLogin>
+    <isAdmin>false</isAdmin>
+    <isBroker>false</isBroker>
+    <isReadOnly>false</isReadOnly>
+    <password>_aaBB00_</password>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user just created (insertWhen = updateWhen)">
+                            <con:configuration>
+                                <path>/user/insertWhen/text()=/user/updateWhen/text()</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Create conflitingUser">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Create conflitingUser" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/conflictingUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>conflictingUser-code</code>
+    <firstName>conflictingUser-first-name</firstName>
+    <lastName>conflictingUser-last-name</lastName>
+    <userName>testUser-username</userName>
+    <email>conflictingUser@test.case</email>
+    <canLogin>true</canLogin>
+    <isAdmin>false</isAdmin>
+    <isBroker>false</isBroker>
+    <isReadOnly>false</isReadOnly>
+    <password>_aaBB00_</password>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>400</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify one violation reported">
+                            <con:configuration>
+                                <path>count(/violations/violation)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="XQuery Match">
+                            <con:configuration>
+                                <path>contains(/violations/violation/message/text(), 'UNIQUE')</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify conflictingUser has NOT been created">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify conflictingUser has NOT been created" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=conflictingUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Delete testUser">
+                <con:settings/>
+                <con:config service="Deleter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Delete testUser" mediaType="application/xml" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify testUser has been deleted">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser has been deleted" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite>
+    <con:testSuite name="User with UserPromotionApprover">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="CRUD - Top entity" searchProperties="true" id="99d13da4-b03e-48fd-89a1-918b82c7eb17">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Verify testUser is missing">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser is missing" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>404</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User is missing">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Create testUser with UserPromotionApprover">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Create testUser with UserPromotionApprover" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <firstName>testUser-first-name</firstName>
+    <lastName>testUser-last-name</lastName>
+    <userName>testUser-username</userName>
+    <email>testUser@test.case</email>
+    <canLogin>true</canLogin>
+    <isAdmin>false</isAdmin>
+    <isBroker>false</isBroker>
+    <isReadOnly>false</isReadOnly>
+    <password>_aaBB00_</password>
+    <promotionApprovers>
+        <code>testUserPromotionApprover-code-1</code>
+        <user.code>testUser-code</user.code>
+        <userApprover.code>000111</userApprover.code>
+        <approvalThreshold>50000.00</approvalThreshold>
+    </promotionApprovers>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user just created (insertWhen = updateWhen)">
+                            <con:configuration>
+                                <path>/user/insertWhen/text()=/user/updateWhen/text()</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify testUser is created with testUserPromotionApprover-1">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser is created with testUserPromotionApprover-1" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User is present">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User as one UserPromotionApprover">
+                            <con:configuration>
+                                <path>count(/user/promotionApprovers)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="UserPromotionApprover is correct">
+                            <con:configuration>
+                                <path>/user/promotionApprovers/code/text()</path>
+                                <content>&lt;xml-fragment>testUserPromotionApprover-code-1&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Update testUserPromotionApprover-code-1">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Update testUserPromotionApprover-code-1" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <promotionApprovers>
+        <code>testUserPromotionApprover-code-1</code>
+        <approvalThreshold>5.00</approvalThreshold>
+    </promotionApprovers>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned with testUserPromotionApprover-1">
+                            <con:configuration>
+                                <path>count(/user/promotionApprovers)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify threshold just updated">
+                            <con:configuration>
+                                <path>/user/promotionApprovers/approvalThreshold/text()</path>
+                                <content>&lt;xml-fragment>5.00&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Add a second UserPromotionApprover to testUser">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Add a second UserPromotionApprover to testUser" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <promotionApprovers>
+        <code>testUserPromotionApprover-code-1</code>
+    </promotionApprovers>
+    <promotionApprovers>
+        <code>testUserPromotionApprover-code-2</code>
+        <user.code>testUser-code</user.code>
+        <userApprover.code>000111</userApprover.code>
+        <approvalThreshold>50000.00</approvalThreshold>
+    </promotionApprovers>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user returned">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user just created (insertWhen = updateWhen)">
+                            <con:configuration>
+                                <path>/user/insertWhen/text()=/user/updateWhen/text()</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify testUser has now 2 UserPromotionApprover records">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser has now 2 UserPromotionApprover records" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User is present">
+                            <con:configuration>
+                                <path>count(/user)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User as two UserPromotionApprover">
+                            <con:configuration>
+                                <path>count(/user/promotionApprovers)</path>
+                                <content>2</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="First UserPromotionApprover is correct">
+                            <con:configuration>
+                                <path>/user/promotionApprovers/code/text()</path>
+                                <content>&lt;xml-fragment>testUserPromotionApprover-code-1&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Second UserPromotionApprover is correct">
+                            <con:configuration>
+                                <path>/user/promotionApprovers/code/text()</path>
+                                <content>&lt;xml-fragment>testUserPromotionApprover-code-2&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Delete first UserPromotionApprover">
+                <con:settings/>
+                <con:config service="Setter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user/testUser-code" methodName="Put" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Delete first UserPromotionApprover" mediaType="application/xml" postQueryString="false" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request><![CDATA[
+
+<user>
+    <code>testUser-code</code>
+    <promotionApprovers>
+        <code>testUserPromotionApprover-code-2</code>
+    </promotionApprovers>
+</user>
+                        
+                        ]]></con:request>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify user has one UserPromotionApprover record">
+                            <con:configuration>
+                                <path>count(/user/promotionApprovers)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify second UserPromotionApprover record is there">
+                            <con:configuration>
+                                <path>/user/promotionApprovers/code/text()</path>
+                                <content>&lt;xml-fragment>testUserPromotionApprover-code-2&lt;/xml-fragment></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Delete testUser">
+                <con:settings/>
+                <con:config service="Deleter" resourcePath="/${webcontext.name}/resources/${test.http.tenant.acme}/user" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Delete testUser" mediaType="application/xml" accept="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user/testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:testStep type="restrequest" name="Verify testUser has been deleted">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:9998/student" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Verify testUser has been deleted" mediaType="application/xml">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-code</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is present">
+                            <con:configuration>
+                                <path>count(/users)</path>
+                                <content>1</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="User list is empty">
+                            <con:configuration>
+                                <path>count(/users/user)</path>
+                                <content>0</content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            <con:properties/>
+        </con:testCase>
+        <con:properties/>
+    </con:testSuite><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user/conflictingUser-code</con:endpoint>
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}" password="${test.http.password.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user</con:endpoint>
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}" password="${test.http.password.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user</con:endpoint>
+    </con:endpointStrategy>
+    <con:properties/>
+    <con:wssContainer/>
+</con:soapui-project>

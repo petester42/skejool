@@ -1,0 +1,75 @@
+package com.soen341.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.when;
+
+import org.junit.Test;
+import org.mockito.invocation.InvocationOnMock;
+import org.mockito.stubbing.Answer;
+
+import com.soen341.model.Student;
+
+//--------------------------------------------------------------------------------------------------------------------------------
+public class StudentDaoTest
+{
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Tests EntityManager setters and getters
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@Test
+	public void testSetGetEntityManager()
+	{
+		EntityManager entityManager = mock(EntityManager.class);
+		StudentDao instance = new StudentDao();
+		instance.setEntityManager(entityManager);
+
+		assertEquals(entityManager, instance.getEntityManager());
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Tests loadProfile
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@Test
+	public void testLoadProfile()
+	{
+		// create mock student profile
+		final Student mockStudent = new Student();
+		mockStudent.setProfileId(Long.valueOf(10));
+		mockStudent.setStudentId("1234567");
+		mockStudent.setBarcode("12345678901012");
+
+		StudentDao studentDao = new StudentDao();
+
+		// create mock entity manager
+		EntityManager entityManager = mock(EntityManager.class);
+
+		Query testQuery = mock(Query.class);
+
+		testQuery = entityManager.createNamedQuery("Student.getByStudentId");
+		testQuery.setParameter("studentId", mockStudent.getStudentId());
+
+		// return mock student entity when getResultList() is called
+		doAnswer(new Answer<Student>()
+				{
+					public Student answer(InvocationOnMock invocation)
+					{
+						return mockStudent;
+					}
+			
+				}).when(testQuery).getResultList();
+
+		assertEquals(mockStudent, studentDao.loadProfile(mockStudent.getStudentId()));
+	}
+}

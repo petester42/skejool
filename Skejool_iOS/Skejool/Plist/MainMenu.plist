@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>text</key>
+			<string>View Sequence</string>
+			<key>request</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>View Courses</string>
+			<key>request</key>
+			<true/>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>text</key>
+			<string>View Schedules</string>
+			<key>request</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Generate Schedule</string>
+			<key>request</key>
+			<false/>
+		</dict>
+	</array>
+</array>
+</plist>

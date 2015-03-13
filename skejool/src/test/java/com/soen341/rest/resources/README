@@ -1,0 +1,4 @@
+REST entry points could be tested with Grizzly.
+However, those tests are testing Jersey framework only, as the underlying services are mocked.
+The framework had been already tested by the community.
+Therefore, it's been decided to skip the testing of the REST service entry points.

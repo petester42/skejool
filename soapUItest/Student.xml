@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Student" resourceRoot="${projectDir}" soapui-version="4.0.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="Loaders" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        
+        <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+            
+        <con:endpoint>http://localhost:8080/skejool/students/9060555</con:endpoint><con:endpoint>http://localhost:8080/skejool/students/9020955</con:endpoint><con:endpoint>http://localhost:8080/skejool/students/0000000</con:endpoint><con:endpoint>http://localhost:8080/skejool/students/0000000/testpswd</con:endpoint><con:endpoint>http://localhost:8080/skejool/students/9060005/wrongpswd</con:endpoint><con:endpoint>http://localhost:8080/skejool/students/9060005/testpswd</con:endpoint><con:endpoint>http://localhost:8080/skejool/sequence/bySequenceId/CompEngrSept</con:endpoint><con:endpoint>http://localhost:8080/skejool/spring_security_login</con:endpoint><con:endpoint>http://localhost:8080/skejool/courses/coen421</con:endpoint><con:endpoint>http://localhost:8080/skejool/sequence/byProgId/COEN</con:endpoint><con:endpoint>http://localhost:8080/skejool/regHistory/completed/9060555</con:endpoint></con:endpoints>
+        <con:resource name="Student" path="http://localhost:8080/skejool/students/{studentId}">
+            <con:settings/>
+            <con:parameters/>
+            <con:method name="Get" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="FAULT">
+                    <con:mediaType>text/html</con:mediaType>
+                    <con:status>404 405</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>users</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>text/html</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>html</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>Response</con:element>
+                </con:representation>
+                <con:representation type="FAULT">
+                    <con:mediaType>application/json</con:mediaType>
+                    <con:status>404</con:status>
+                    <con:params/>
+                    <con:element xmlns:tes="http://localhost/TI/resources/Acme/user/testUser">tes:Fault</con:element>
+                </con:representation>
+                <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>404 406</con:status><con:params/><con:element>data</con:element></con:representation>
+                <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Load student profile byStudent ID" mediaType="application/xml" accept="application/xml">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                    </con:settings>
+                    <con:endpoint>${test.http.host}/resources/${test.http.tenant.acme}/user?userName=testUser-username</con:endpoint>
+                    <con:request/>
+                    <con:credentials>
+                        <con:username>${test.http.user.acme}</con:username>
+                        <con:password>${test.http.password.acme}</con:password>
+                    </con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:jmsPropertyConfig/>
+                    <con:parameters/>
+                </con:request>
+                
+            </con:method>
+        </con:resource>
+    </con:interface>
+    
+    
+    <con:testSuite name="StudentServices">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="GET profile by Student ID" searchProperties="true" id="b0add350-4ece-43a2-841d-b921124db5ee">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Load non-existent profile - fail">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load non-existent profile - fail" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/0000000</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name=" HTTP Status Code =404">
+                            <con:configuration><codes>404</codes></con:configuration>
+                        </con:assertion>
+                        
+                        
+                        <con:assertion type="Simple Contains" name="Reponse contains error message"><con:configuration><token>Student with ID '0000000' not found</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Load profile by ID (9020955) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load profile by ID (9020955) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9020955</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid profile ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:profileId='4'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify valid student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:studentId='9020955'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            
+            
+            
+            
+            <con:testStep type="restrequest" name="Load profile by ID (9060555) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load profile by ID (9060555) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9060555</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify &quot;profileId&quot;:2 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:profileId='2'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify &quot;studentId&quot;:9060555 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:studentId='9060555'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:properties/>
+        </con:testCase>
+        <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="GET sequence by Program ID" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Load non-existent profile - fail">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load non-existent profile - fail" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/0000000</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name=" HTTP Status Code =404">
+                            <con:configuration><codes>404</codes></con:configuration>
+                        </con:assertion>
+                        
+                        
+                        <con:assertion type="Simple Contains" name="Reponse contains error message"><con:configuration><token>Student with ID '0000000' not found</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Load profile by ID (9020955) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load profile by ID (9020955) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/courses/coen421</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid profile ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:profileId='4'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify valid student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:studentId='9020955'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>9060555</con:username>
+                            <con:password>password2</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            
+            
+            
+            
+            <con:testStep type="restrequest" name="load Course by ID (coen421) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="load Course by ID (coen421) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/courses/coen421</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid profile ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:profileId='4'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify valid student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:studentId='9020955'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>9060555</con:username>
+                            <con:password>password2</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="CourseSequence by sequenceID (ElecEngrSept) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="CourseSequence by sequenceID (ElecEngrSept) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/sequence/bySeqId/ElecEngrSept</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid profile ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:profileId='4'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify valid student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:studentId='9020955'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>9060555</con:username>
+                            <con:password>password2</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="CourseSequence by programID (COEN) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="CourseSequence by programID (COEN) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/sequence/byProgId/COEN</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid profile ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:profileId='4'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify valid student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9020955';
+count(//ns1:Response[ns1:studentId='9020955'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>9060555</con:username>
+                            <con:password>password2</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="test">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="test" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/regHistory/completed/9060555</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify &quot;profileId&quot;:2 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:profileId='2'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify &quot;studentId&quot;:9060555 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:studentId='9060555'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Load profile by ID (9060555) - pass">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Load profile by ID (9060555) - pass" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9060555</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify &quot;profileId&quot;:2 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:profileId='2'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="XQuery Match" name="Verify &quot;studentId&quot;:9060555 is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060555';
+count(//ns1:Response[ns1:studentId='9060555'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:properties/>
+        </con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="true" maxResults="0" name="Authenticate Student" searchProperties="true" id="c1e02e63-4d5a-4c50-a028-31cf23ebcbc5">
+            <con:settings/>
+            <con:testStep type="restrequest" name="Non-existing ID (fails)">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Non-existing ID (fails)" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/0000000/testpswd</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name=" HTTP Status Code =404">
+                            <con:configuration><codes>404</codes></con:configuration>
+                        </con:assertion>
+                        
+                        
+                        <con:assertion type="Simple Contains" name="Reponse contains error message"><con:configuration><token>Student with ID '0000000' not found</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Wrong password (fails)">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Wrong password (fails)" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9060005/wrongpswd</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>406</codes></con:configuration>
+                        </con:assertion>
+                        
+                        
+                        <con:assertion type="Simple Contains" name="Reponse contains error message"><con:configuration><token>Authentication failed. Student ID '9060005'</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep>
+            
+            
+            
+            
+            <con:testStep type="restrequest" name="valid login details (passes)">
+                <con:settings/>
+                <con:config service="Loaders" resourcePath="/http://localhost:8080/skejool/students/{studentId}" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="valid login details (passes)" mediaType="application/xml" accept="">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8080/skejool/students/9060005/testpswd</con:endpoint>
+                        <con:request/>
+                        <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes">
+                            <con:configuration><codes>200</codes></con:configuration>
+                        </con:assertion>
+                        
+                        <con:assertion type="XQuery Match" name="Verify valid Student ID is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060005/testpswd';
+count(//ns1:Response[ns1:studentId='9060005'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion><con:assertion type="XQuery Match" name="Verify valid barcode is returned">
+                            <con:configuration><path>declare namespace ns1='http://localhost/skejool/students/9060005/testpswd';
+count(//ns1:Response[ns1:barcode='1234567891012340'])</path><content>&lt;xml-fragment>1&lt;/xml-fragment></content><allowWildcards>false</allowWildcards></con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:username>${test.http.user.acme}</con:username>
+                            <con:password>${test.http.password.acme}</con:password>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters/>
+                    </con:restRequest>
+                </con:config>
+            </con:testStep><con:properties/>
+        </con:testCase><con:properties/>
+    </con:testSuite>
+    
+    
+    <con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user/conflictingUser-code</con:endpoint>
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}" password="${test.http.password.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user</con:endpoint>
+        <con:endpoint mode="COMPLEMENT" username="${test.http.user.acme}" password="${test.http.password.acme}">${test.http.host}/resources/${test.http.tenant.acme}/user</con:endpoint>
+    </con:endpointStrategy>
+    <con:properties/>
+    <con:wssContainer/>
+<con:sensitiveInformation/></con:soapui-project>

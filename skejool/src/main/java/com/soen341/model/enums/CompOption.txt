@@ -1,0 +1,24 @@
+
+package com.soen341.model.enums;
+
+public enum CompOption
+{
+	// Append new enum constants at the end of the list.
+
+	CSP("Communication and Signal Processing"),
+	CS("Computer Systems"),
+	VLSI("Electronics/VLSI"),
+	PCS("Power and Control Systems"),
+	WE("Waves and Electromagnetics");
+	
+
+	@SuppressWarnings("unused")
+	private String name;
+	
+	// --------------------------------------------------------------------------------------------------------------------------------
+	private CompOption(String name)
+	{
+		this.name = name;
+	}
+
+}

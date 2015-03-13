@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>semester</key>
+		<string>Fall 2011</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 352</string>
+				<key>CourseName</key>
+				<string>Data Structures and Algorithms</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW MB-S1.430</string>
+						<key>section</key>
+						<string>H</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Thu</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW MB-S1.430</string>
+						<key>section</key>
+						<string>H</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>12:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-905</string>
+						<key>section</key>
+						<string>H HA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 390</string>
+				<key>CourseName</key>
+				<string>Computer Engineering Team Design Project</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-920</string>
+						<key>section</key>
+						<string>H</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-920</string>
+						<key>section</key>
+						<string>H</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-429</string>
+						<key>section</key>
+						<string>H HA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 317</string>
+				<key>CourseName</key>
+				<string>Microprocessor Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>13:00</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-431</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>13:00</string>
+						<key>weekDay</key>
+						<string>Thu</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-431</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:45</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-859</string>
+						<key>section</key>
+						<string>U UJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 364</string>
+				<key>CourseName</key>
+				<string>Signals and Systems II</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>13:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-431</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>13:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-431</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-619</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>semester</key>
+		<string>Winter 2012</string>
+		<key>courses</key>
+		<array>
+			<dict>
+				<key>CourseID</key>
+				<string>COEN 346</string>
+				<key>CourseName</key>
+				<string>Operating Systems</string>
+				<key>numberOfCredits</key>
+				<string>4.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Tue</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-820</string>
+						<key>section</key>
+						<string>Y</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-433</string>
+						<key>section</key>
+						<string>Y YA</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>17:45</string>
+						<key>endTime</key>
+						<string>19:35</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-849</string>
+						<key>section</key>
+						<string>Y YA YJ</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>SOEN 341</string>
+				<key>CourseName</key>
+				<string>Software Process</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>8:45</string>
+						<key>endTime</key>
+						<string>10:00</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW FG-B070</string>
+						<key>section</key>
+						<string>S</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>12:15</string>
+						<key>endTime</key>
+						<string>13:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-831</string>
+						<key>section</key>
+						<string>S SA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 353</string>
+				<key>CourseName</key>
+				<string>Transmission Line Circuits and Electromagnetic Waves</string>
+				<key>numberOfCredits</key>
+				<string>3.00</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>10:15</string>
+						<key>endTime</key>
+						<string>11:30</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-509</string>
+						<key>section</key>
+						<string>W</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>13:15</string>
+						<key>endTime</key>
+						<string>14:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW MB-3.365</string>
+						<key>section</key>
+						<string>W WA</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>CourseID</key>
+				<string>ELEC 370</string>
+				<key>CourseName</key>
+				<string>Modelling and Analysis of Physical Systems</string>
+				<key>numberOfCredits</key>
+				<string>3.50</string>
+				<key>completed</key>
+				<string>0</string>
+				<key>time</key>
+				<array>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Mon</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>16:15</string>
+						<key>endTime</key>
+						<string>17:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lec</string>
+						<key>location</key>
+						<string>SGW H-531</string>
+						<key>section</key>
+						<string>U</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>11:45</string>
+						<key>endTime</key>
+						<string>14:30</string>
+						<key>weekDay</key>
+						<string>Wed</string>
+						<key>type</key>
+						<string>Lab</string>
+						<key>location</key>
+						<string>SGW H-822</string>
+						<key>section</key>
+						<string>U UC UN</string>
+					</dict>
+					<dict>
+						<key>startTime</key>
+						<string>14:15</string>
+						<key>endTime</key>
+						<string>15:05</string>
+						<key>weekDay</key>
+						<string>Fri</string>
+						<key>type</key>
+						<string>Tut</string>
+						<key>location</key>
+						<string>SGW H-625</string>
+						<key>section</key>
+						<string>U UC</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

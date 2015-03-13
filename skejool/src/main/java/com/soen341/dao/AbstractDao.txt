@@ -1,0 +1,464 @@
+// Copyright (c) MEI Computer Technology Group Inc, 2011
+
+package com.meicpg.ti.persist.dao;
+
+import java.lang.reflect.ParameterizedType;
+import java.math.BigInteger;
+import java.sql.SQLException;
+import java.util.List;
+import org.apache.commons.lang.StringUtils;
+import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Example;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
+import org.springframework.beans.InvalidPropertyException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import com.meicpg.ti.common.IntrospectionHelper;
+import com.meicpg.ti.domain.ExclusionStrategyManager;
+import com.meicpg.ti.domain.SortFieldWhenNested;
+import com.meicpg.ti.domain.dto.ExclusionStrategy;
+import com.meicpg.ti.domain.dto.Range;
+import com.meicpg.ti.domain.dto.RequestedAccessRights;
+import com.meicpg.ti.domain.dto.Sorting;
+import com.meicpg.ti.domain.dto.Sorting.SortingElement;
+import com.meicpg.ti.domain.exceptions.BaseException;
+import com.meicpg.ti.domain.exceptions.InvalidRangeException;
+import com.meicpg.ti.domain.model.AbstractBase;
+import com.meicpg.ti.persist.dao.utils.PreparedCriteria;
+import com.meicpg.ti.security.AccessRightsAgent;
+import com.meicpg.ti.security.PreAuthorizeAgent;
+import com.meicpg.ti.security.accessrights.AbstractAccessRightsStrategy;
+import com.meicpg.ti.security.accessrights.AccessRights;
+
+// --------------------------------------------------------------------------------------------------------------------------------
+/**
+ * Base abstract entity DAO. All DAO objects should inherit from this abstract class in order to offer a common basic implementation.
+ */
+// --------------------------------------------------------------------------------------------------------------------------------
+public abstract class AbstractDao<T extends AbstractBase<T>> extends HibernateDaoSupport
+{
+	public static final String SEQUENCE_NAME = "ti_key_sequence";
+	public static final String PREFIX = "MEI-";
+
+	private Class<T> modelClass;
+
+	protected AccessRightsAgent accessRightsAgent = AccessRightsAgent.getInstance();
+
+	@Autowired
+	private ApplicationContext applicationContext;
+
+	@Autowired
+	private ExclusionStrategyManager exclusionSrategyManager;
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	public AbstractDao(SessionFactory sessionFactory)
+	{
+		setSessionFactory(sessionFactory);
+		this.modelClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public Class<T> getModelClass()
+	{
+		return modelClass;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public T save(T entity)
+	{
+		getHibernateTemplate().saveOrUpdate(entity);
+
+		return entity;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public void delete(T entity)
+	{
+		getHibernateTemplate().delete(entity);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public int delete(Long primaryKey)
+	{
+		int bulkUpdate = getHibernateTemplate().bulkUpdate(
+				"delete from " + getModelClass().getSimpleName() + " instance where instance.primaryKey = ?", primaryKey);
+		return bulkUpdate;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	// @SuppressWarnings("unchecked")
+	public T findByPrimaryKey(Long primaryKey)
+	{
+		// AccessRights accessRights = getAccessRightsAnnotation();
+		//
+		// if (accessRights != null && !PreAuthorizeAgent.isAdmin())// class is protected by accessRights
+		// {
+		// PreparedCriteria preparedCriteria = preparePreparedCriteria();
+		// preparedCriteria.add(Restrictions.idEq(primaryKey));
+		//
+		// RequestedAccessRights requestedAccessRights = new RequestedAccessRights(AccessRightType.READ_ONLY, false);
+		// applyAccessRights(preparedCriteria, requestedAccessRights, accessRights);
+		//
+		// List<T> list = preparedCriteria.getListCriteria().list();
+		// if (list.size() != 1)
+		// {
+		// return list.get(0);
+		// }
+		// throw new DataNotFoundException(String.format(getModelClass().getSimpleName() + " with primarykey '%s' not found",
+		// primaryKey));
+		// }
+		// else
+		// { // standard loading when no accessrights protection or is admin
+		T load = getHibernateTemplate().load(getModelClass(), primaryKey);
+		String.valueOf(load.getPrimaryKey());
+		return load;
+		// }
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public List<T> findAll()
+	{
+		return findByCriteria();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	public List<T> find(String queryString, Object... args)
+	{
+		return getHibernateTemplate().find(queryString, args);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public T findUnique(String queryString, Object... args)
+	{
+		List<T> list = find(queryString, args);
+		if (list.size() != 1)
+			return null;
+		else
+			return list.get(0);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public Session getCurrentSession()
+	{
+		return getHibernateTemplate().getSessionFactory().getCurrentSession();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public Criteria prepareCriteria()
+	{
+		return getCurrentSession().createCriteria(getModelClass());
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public PreparedCriteria preparePreparedCriteria()
+	{
+		return new PreparedCriteria(getCurrentSession(), getModelClass());
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public List<T> findByExample(T example)
+	{
+		Criteria crit = prepareCriteria();
+		return findByExample(crit, example);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	public List<T> findByExample(Criteria crit, T example)
+	{
+		Example ex = Example.create(example).excludeZeroes().ignoreCase().enableLike(MatchMode.ANYWHERE);
+
+		crit = crit.add(ex);
+
+		return crit.list();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	public T findByExampleUnique(T example)
+	{
+		Criteria crit = prepareCriteria();
+		crit = crit.add(Example.create(example));
+
+		return (T) crit.uniqueResult();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	protected List<T> findByCriteria(Criterion... criterion)
+	{
+		Criteria crit = prepareCriteria();
+
+		for (Criterion c : criterion)
+			crit = crit.add(c);
+
+		return crit.list();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Method used when needing a list with paging/scrolling and or ordering count
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public List<T> findByExample(T example, Range range, Sorting sorting, RequestedAccessRights requestedAccessRights)
+	{
+		PreparedCriteria preparedCriteria = preparePreparedCriteria();
+		Example ex = Example.create(example).excludeZeroes().ignoreCase().enableLike(MatchMode.ANYWHERE);
+		preparedCriteria.add(ex);
+
+		return findByCriteria(preparedCriteria, range, sorting, requestedAccessRights);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public List<T> findByCriteria(PreparedCriteria preparedCriteria, Range range, Sorting sorting,
+			RequestedAccessRights requestedAccessRights) throws SecurityException
+	{
+		return findByCriteria(preparedCriteria, range, sorting, requestedAccessRights, null);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Method used when needing a list with paging/scrolling and or ordering count
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	public List<T> findByCriteria(PreparedCriteria preparedCriteria, Range range, Sorting sorting,
+			RequestedAccessRights requestedAccessRights, ExclusionStrategy exclusionStrategy) throws SecurityException
+	{
+		AccessRights accessRights = getAccessRightsAnnotation();
+
+		if (requestedAccessRights != null && accessRights != null && !PreAuthorizeAgent.isAdmin())// class is protected by accessRights
+		{
+			applyAccessRights(preparedCriteria, requestedAccessRights, accessRights);
+
+		}
+
+		if (exclusionStrategy != null && !StringUtils.isEmpty(exclusionStrategy.getPath())
+				&& StringUtils.isNumeric(exclusionStrategy.getExclusionKey()))
+		{
+			exclusionSrategyManager.applyExclusionStrategy(preparedCriteria, getModelClass(), exclusionStrategy);
+
+		}
+
+		if (sorting != null)
+		{
+			applySorting(preparedCriteria, sorting);
+		}
+
+		if (range != null)
+		{
+			applyRange(preparedCriteria, range);
+		}
+
+		List<T> list = preparedCriteria.getListCriteria().list();
+
+		if (range != null)
+			range.setListSize(list.size());
+
+		return list;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Method altering the PreparedCriteria so that Range is applied
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	protected void applyRange(PreparedCriteria preparedCriteria, Range range)
+	{
+		// scrolling processing
+		preparedCriteria.setFirstResult(range.getStartRow());
+
+		if (range.getCount() != null)
+		{
+			preparedCriteria.setMaxResults(range.getCount());
+		}
+		preparedCriteria.setProjectionForCountQuery();
+		Long longCount = (Long) preparedCriteria.getCountCriteria().list().get(0);
+		range.setTotal(longCount.intValue());
+		// if total is inconsistent with endrow, no need to continue
+		if (range.getStartRow() > 0 && range.getStartRow() > range.getTotal() - 1)
+			throw new InvalidRangeException("range header mal formed for scrolling : result set shorter than expected");
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Method altering the PreparedCriteria so that Sorting is applied Should an orderBy represent a vector as opposed to a scalar, the
+	 * dependency class is introspected so as to look for a {@link SortFieldWhenNested} annotation Should such an annotation be found,
+	 * odering will be carried out on the field documented in the annotation as opposed to the primarykey
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	protected void applySorting(PreparedCriteria preparedCriteria, Sorting sorting)
+	{
+
+		for (SortingElement sortingElement : sorting)
+		{
+			Class<?> dependencyClass = IntrospectionHelper.getInstance().getLastDependencyClass(getModelClass(),
+					sortingElement.getOrderBy());
+			SortFieldWhenNested displayFieldAnnotation = dependencyClass.getAnnotation(SortFieldWhenNested.class);
+
+			if (displayFieldAnnotation == null)
+			{
+				if (sortingElement.isAsc())
+				{
+					preparedCriteria.addOrder(Order.asc(sortingElement.getOrderBy()));
+				}
+				else
+				{
+					preparedCriteria.addOrder(Order.desc(sortingElement.getOrderBy()));
+				}
+			}
+			else
+			{
+				if (sortingElement.isAsc())
+				{
+					preparedCriteria.addOrder(sortingElement.getOrderBy(), Order.asc(displayFieldAnnotation.value()));
+				}
+				else
+				{
+					preparedCriteria.addOrder(sortingElement.getOrderBy(), Order.desc(displayFieldAnnotation.value()));
+				}
+			}
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Method altering the PreparedCriteria so access rights (one or more are taken into account
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	protected void applyAccessRights(PreparedCriteria preparedCriteria, RequestedAccessRights requestedAccessRights,
+			AccessRights accessRights)
+	{
+
+		Class<? extends AbstractAccessRightsStrategy> strategyClass = (Class<? extends AbstractAccessRightsStrategy>) accessRights
+				.strategyClass();
+
+		AbstractAccessRightsStrategy strategy = applicationContext.getBean(strategyClass);
+		if (strategy != null)
+		{
+			strategy.applyAccessRights(getModelClass(), preparedCriteria, requestedAccessRights);
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	protected AccessRights getAccessRightsAnnotation()
+	{
+		return modelClass.getAnnotation(AccessRights.class);
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	@SuppressWarnings("unchecked")
+	protected T findByCriteriaUnique(Criterion... criterion)
+	{
+		Criteria crit = prepareCriteria();
+
+		for (Criterion c : criterion)
+			crit = crit.add(c);
+
+		return (T) crit.uniqueResult();
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Determine the code of a new entity to save thanks to the public id generator sequence
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public String getNewCodeFromSequence()
+	{
+
+		Long nextval = getHibernateTemplate().execute(new HibernateCallback<Long>()
+		{
+			@SuppressWarnings("unchecked")
+			@Override
+			public Long doInHibernate(Session session) throws HibernateException, SQLException
+			{
+				SQLQuery sqlQuery = session.createSQLQuery("SELECT nextval('" + SEQUENCE_NAME + "');");
+				List<BigInteger> list = sqlQuery.list();
+				Long nextval = list.get(0).longValue();
+				return nextval;
+			}
+		});
+
+		String nextValue = PREFIX + Long.toString(nextval);
+
+		return nextValue;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * Find an entity by an alternate key the name of which is returned by {@link AbstractBase#getAlternateKeyName()}
+	 * 
+	 * @throws InvalidPropertyException if the entity has no such property as the one returned by method
+	 */
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public T findByAlternateKey(Object value)
+	{
+		T example;
+		try
+		{
+			example = getModelClass().newInstance();
+
+			// AccessRights accessRights = getAccessRightsAnnotation();
+			//
+			// if (accessRights != null && !PreAuthorizeAgent.isAdmin())// class is protected by accessRights
+			// {
+			// PreparedCriteria preparedCriteria = preparePreparedCriteria();
+			// preparedCriteria.add(Restrictions.eq(example.getAlternateKeyName(), value));
+			//
+			// RequestedAccessRights requestedAccessRights = new RequestedAccessRights(AccessRightType.READ_ONLY, false);
+			// applyAccessRights(preparedCriteria, requestedAccessRights, accessRights);
+			//
+			// T instance = (T) preparedCriteria.getListCriteria().uniqueResult();
+			//
+			// return instance;
+			// }
+			// else
+			// {
+
+			BeanWrapper beanWrapper = new BeanWrapperImpl(example);
+			// the following snippet raises an InvalidPropertyException should the entity have no such property
+			beanWrapper.getPropertyDescriptor(example.getAlternateKeyName());
+			beanWrapper.setPropertyValue(example.getAlternateKeyName(), value);
+
+			// the populated example is now ready to be processes
+			return findByExampleUnique(example);
+			// }
+		}
+		catch (InstantiationException e)
+		{
+			throw new BaseException("could not instantiate class " + getModelClass(), e);
+		}
+		catch (IllegalAccessException e)
+		{
+			throw new BaseException("could not instantiate class " + getModelClass(), e);
+		}
+
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public void setMockApplicationContext(ApplicationContext applicationContext)
+	{
+		this.applicationContext = applicationContext;
+	}
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+	public void setMockExclusionSrategyManager(ExclusionStrategyManager exclusionSrategyManager)
+	{
+		this.exclusionSrategyManager = exclusionSrategyManager;
+	}
+
+	
+}
